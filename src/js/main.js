@@ -1,3 +1,10 @@
+/**
+ * InstaSave - Instagram Media Downloader
+ * Fork of Instagram-Downloader by HOAIAN2
+ * Original Repository: https://github.com/HOAIAN2/Instagram-Downloader
+ * Fork Maintainer: Angel Luis Sáez Castillejo (Tenshi)
+ */
+
 const IG_BASE_URL = window.location.origin + '/';
 /**
  * @deprecated
@@ -13,7 +20,7 @@ const IG_POST_REGEX = /\/(p|tv|reel|reels)\/([A-Za-z0-9_-]*)(\/?)/;
 const IG_STORY_REGEX = /\/(stories)\/(.*?)\/(\d*)(\/?)/;
 const IG_HIGHLIGHT_REGEX = /\/(stories)\/(highlights)\/(\d*)(\/?)/;
 
-const APP_NAME = `${chrome.runtime.getManifest().name} v${chrome.runtime.getManifest().version}`;
+const APP_NAME = `InstaSave v${chrome.runtime.getManifest().version}`;
 
 const appCache = Object.freeze({
     /**
