@@ -1,51 +1,58 @@
-# Instagram-Downloader
+# InstaSave
 
 ![icon](icons/icon128.png)
 
-## How this work
+## How It Works
 
-With regex and some `ReactFiber` magic, I'm able to know which post you wanna download and fetch the api to download the photos for you.
+Using a combination of regex and some `ReactFiber` magic, this extension
+detects the post you want and fetches Instagram's API to download the
+photos or videos for you.
 
-## Browser compatibility
+## Browser Compatibility
 
-This extension should work fine on the following browsers with `fetch()` API and Chromium base browser, tested Browser:
+The extension works on any Chromium-based browser that supports the
+`fetch()` API. Tested on:
 
-* Google Chrome
-* MS Edge
-* FireFox
+-   Google Chrome\
+-   Microsoft Edge\
+-   Firefox
 
-## Download and install
+## Installation
 
-* Download [latest version](https://github.com/HOAIAN2/Instagram-Downloader/releases) and extract to a folder
-* Enable Chrome extensions developer mode
-* Drag and drop extracted folder to `chrome://extensions/`
+1.  Download the [latest
+    release](https://github.com/Randomcobi/InstaSave/releases/tag/1.0)
+    and extract it to a folder.\
+2.  Enable **Developer Mode** in your browser's extensions settings.\
+3.  Drag and drop the extracted folder into `chrome://extensions/`.
 
 ## Usage
 
-* Go to any `post`, `reels`, `stories`, etc. Then click `Download` button to fetch data.
-
-* Click on any photos/videos to save.
-
-* Toggle multi select by click on `Photos` and select photos by click on them (or select all by click and hold on `Photos`). Then click on `Download` to save zip file.
-
-* If you scroll on the home page, this app will auto detect the post you wanna download so you don't have to click to comment section to open modal. Thanks to ReactFiber.
+-   Open any post, reel, or story and click the **Download** button.\
+-   Click on individual photos or videos to save them directly.\
+-   To download multiple items, toggle multi-select by clicking
+    **Photos**, select the items you want (or hold down **Photos** to
+    select all), then click **Download** to save them as a ZIP file.\
+-   On the home page, the extension auto-detects the visible post --- no
+    need to open the comment section, thanks to `ReactFiber`.
 
 ## Features
 
-* Download posts ✔
-* Download reels ✔
-* Download latest stories ✔
-* Download highlight stories ✔
-* Support high resolution ✔
-* Support download zip file ✔
+-   Download posts ✔\
+-   Download reels ✔\
+-   Download recent stories ✔\
+-   Download highlight stories ✔\
+-   High-resolution support ✔\
+-   ZIP download support ✔
 
-## Customize
+## Customization
 
-You can modify anything you want except some constants start with "IG_" that definitely gonna break this extension.
+You're free to customize the extension as you like --- just avoid
+modifying constants that begin with `IG_`, as these are critical for
+functionality.
 
-Edit Hide / Show Transition effects
+Example: adjust hide/show transition effects with CSS
 
-```css
+``` css
 .display-container.hide {
     transform-origin: 85% bottom;
     transform: scale(0);
@@ -54,26 +61,30 @@ Edit Hide / Show Transition effects
 }
 ```
 
-## Keyboard shortcut
+## Keyboard Shortcuts
 
-Some keyboard shortcuts will not work if you use an external application for typing.
+> Note: Some shortcuts may not work if your system or external
+> applications override them.\
+> They also won't work while typing in fields like `input`, `textarea`,
+> or elements with a `textbox` role.
 
-* Download: `D`
-* Close: `esc` `C` `c`
-* Select all `S` `s`
-* Keyboard shortcut should work if you don't focus on special HTML Elements like `input` `textarea` or any element with `textbox` role (ex: comment, search, ...)
+-   **Download:** `D`\
+-   **Close:** `Esc`, `C`, or `c`\
+-   **Select all:** `S` or `s`
 
-## Deprecated features
+## Deprecated Features
 
-These features was deprecated for some reason.
+The following features have been removed:
 
-* V5.1.0
-  * Set fallback download to latest post from some user.
+-   **V5.1.0:** Fallback download of the latest post from a user.
 
 ## Notes
 
-If you save extension on external partition or drive and your Linux Distro doesn't mount automatically, extension will disappear. You have to mount that partition/drive and restart browser.
+-   If the extension is stored on an external drive/partition that isn't
+    auto-mounted on Linux, it may disappear. Simply remount the drive
+    and restart your browser.
 
-## Here is Demo
+## Demo
 
-[Demo v5.1.0](https://github.com/HOAIAN2/Instagram-Downloader/assets/98139595/917369c9-cdbb-4315-8e6d-7a1632a8888b)
+[Watch Demo
+(v5.1.0)](https://github.com/HOAIAN2/Instagram-Downloader/assets/98139595/917369c9-cdbb-4315-8e6d-7a1632a8888b)
